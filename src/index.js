@@ -3,7 +3,7 @@ const app = express();
 const morgan = require('morgan');
 
 //settings
-app.set('port', 3000); //variable del puerto
+app.set('port', process.env.PORT || 3000); //variable del servidor heroku o variable del puerto local
 
 // milddlewares
 app.use(morgan('dev'));
